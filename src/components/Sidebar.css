@@ -1,0 +1,104 @@
+.left-section {
+  background: #fff;
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 25px 10px;
+  transition: all 0.3s ease;
+}
+
+.left-section h2 {
+  color: #364670;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sidebar .item,
+.sign-out {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #364670;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar .item.active h3,
+.sidebar .item.active i,
+.sidebar .item:hover,
+.sign-out:hover {
+  color: #1976d2;
+}
+
+.sidebar .item h3,
+.sign-out h3 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.sidebar .item i,
+.sign-out i {
+  font-size: 22px;
+  font-family: "RemixIcon" !important;
+}
+
+@media screen and (max-width: 1230px) {
+  .left-section {
+    width: 90px;
+  }
+
+  .left-section h2 {
+    font-size: 17px;
+  }
+
+  .sidebar .item {
+    justify-content: center;
+  }
+
+  .sidebar .item h3,
+  .sign-out h3 {
+    display: none;
+  }
+
+  .sidebar .item i,
+  .sign-out i {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .left-section {
+    position: absolute;
+    width: 160px;
+    left: -160px;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .left-section.open {
+    left: 0;
+  }
+
+  .sidebar .item {
+    justify-content: start;
+  }
+
+  .sidebar .item h3,
+  .sign-out h3 {
+    display: block;
+  }
+
+  .sidebar .item i,
+  .sign-out i {
+    font-size: 22px;
+  }
+}

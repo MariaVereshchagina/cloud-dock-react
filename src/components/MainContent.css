@@ -1,0 +1,331 @@
+.main {
+  flex: 6;
+  padding: 25px;
+  background: #f0f5fd;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  width: 75%;
+  padding: 8px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2),
+    0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.search button {
+  font-size: 20px;
+  border: none;
+  background: transparent;
+}
+
+.search input {
+  padding: 4px 6px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.search input:disabled {
+  background: #f0f5fd;
+  cursor: not-allowed;
+}
+
+.search i {
+  cursor: pointer;
+}
+
+.icon-btns {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btns i {
+  font-size: 20px;
+  background: #1976d2;
+  padding: 8px;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.icon-btns i:hover {
+  background: #0d47a1;
+}
+
+.icon-btns i#menu-btn {
+  display: none;
+}
+
+.separator {
+  margin: 35px 0 20px;
+  font-weight: 500;
+  color: #364670;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+}
+
+.quick-access {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.quick-access .item {
+  background: #fff;
+  width: 20%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2),
+    0 24px 20px -24px rgba(71, 82, 107, 0.1);
+  cursor: pointer;
+}
+
+.quick-access .item.active {
+  border-color: #1976d2;
+  box-shadow: none;
+}
+
+.quick-access .item:hover {
+  box-shadow: none;
+  border-color: #999;
+}
+
+.quick-access .item i {
+  font-size: 46px;
+  padding: 10px;
+  border-radius: 16px;
+}
+
+.quick-access .item:nth-child(1) i {
+  color: #1976d2;
+  background: #e6e4ec;
+}
+
+.quick-access .item:nth-child(2) i {
+  color: #1d92f1;
+  background: #ddeffd;
+}
+
+.quick-access .item:nth-child(3) i {
+  color: #ffd12c;
+  background: #fff8df;
+}
+
+.quick-access .item:nth-child(4) i {
+  color: #3bc963;
+  background: #e2f7e8;
+}
+
+.quick-access .item h5 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #364670;
+  margin: 15px 0 8px;
+}
+
+.quick-access .item p {
+  color: #999;
+  font-size: 14px;
+}
+
+table {
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  border-radius: 14px;
+  border-spacing: 0 8px;
+  box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2),
+    0 24px 20px -24px rgba(71, 82, 107, 0.1);
+  margin-bottom: 20px;
+}
+
+table tbody tr {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+table tbody tr.selected,
+table tbody tr:hover {
+  border-radius: 14px;
+  background: #e8eaf6;
+}
+
+table tbody tr td {
+  padding: 16px;
+}
+
+table tbody tr td.icon i {
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+table tbody tr.selected td.icon i,
+table tbody tr:hover td.icon i {
+  border-color: #999;
+}
+
+table tbody tr td.name {
+  font-weight: 500;
+  font-size: 14px;
+  color: #364670;
+}
+
+table tbody tr td.extension,
+table tbody tr td.size {
+  color: #999;
+  font-size: 14px;
+}
+
+table tbody tr td.favorite i {
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+table tbody tr td.more {
+  position: relative;
+}
+
+table tbody tr td.more i {
+  font-size: 20px;
+}
+
+.favorites-content {
+  margin-top: 20px;
+}
+
+.context-menu {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  right: 10px;
+  top: 100%;
+}
+
+.context-menu div {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.context-menu div:hover {
+  background: #f0f0f0;
+}
+
+/* Стили для скроллбара */
+.main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: #f0f5fd;
+  border-radius: 4px;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: #b0bec5;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+  background: #90a4ae;
+}
+
+.main {
+  scrollbar-width: thin;
+  scrollbar-color: #90a4ae #f0f5fd;
+}
+
+@media screen and (max-width: 1230px) {
+  .quick-access {
+    justify-content: space-between;
+  }
+
+  .quick-access .item {
+    width: 23%;
+  }
+
+  .quick-access .item i {
+    font-size: 36px;
+  }
+
+  .quick-access .item h5 {
+    font-size: 16px;
+  }
+
+  .quick-access .item p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .main {
+    padding: 15px;
+  }
+
+  .header {
+    gap: 10px;
+  }
+
+  .icon-btns i#menu-btn {
+    display: block;
+  }
+
+  table tbody tr td.name,
+  table tbody tr td.extension,
+  table tbody tr td.size {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 26px 15px 0;
+  }
+
+  .header {
+    justify-content: start;
+  }
+
+  .search {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main {
+    padding: 100px 15px 0;
+  }
+
+  .search {
+    width: 68%;
+  }
+}
